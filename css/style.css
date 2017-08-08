@@ -1,0 +1,114 @@
+body {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  background-image: url('http://4.bp.blogspot.com/-O90KfBgfnJA/UepU1SmDGyI/AAAAAAAAGh0/zERntzlKFEU/s1600/alpe.jpg');
+}
+
+.tube {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  width: 125px;
+  height: 125px;
+  border: 20px solid #17202A;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+.inner-1 {
+  position: absolute;
+  border: 15px solid #EAF2F8;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  z-index: 5;
+}
+.inner-2 {
+  position: relative;
+  border: 7.5px solid #2C3E50;
+  background-color: #EAF2F8;
+  margin-top: 24px;
+  margin-left: 24px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.inner-3 {
+  position: relative;
+  border: 2.5px solid #EAF2F8;
+  background-color: #2C3E50;
+  margin-top: 8.75px;
+  margin-left: 8.75px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.spoke {
+  position: absolute;
+  height: 35px;
+  width: 5px;
+  background-color: #ABB2B9;
+}
+.spoke-1 {
+  top: -10px;
+  left: 45.5px;
+}
+.spoke-2 {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-60deg);
+}
+.spoke-3 {
+  top: 50px;
+  left: 10px;
+  transform: rotate(-120deg);
+}
+.spoke-4 {
+  top: 70px;
+  left: 45.5px;
+  transform: rotate(-180deg);
+}
+.spoke-5 {
+  top: 50px;
+  left: 82.5px;
+  transform: rotate(-240deg);
+}
+.spoke-6 {
+  top: 10px;
+  left: 82.5px;
+  transform: rotate(-300deg);
+}
+@keyframes spin {
+  0%{ transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
+}
+
+.container {
+  display: none;
+  position: absolute;
+  background-color: rgba(256, 256, 256, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 10px black;
+  padding: 20px;
+}
+
+.root {
+  margin: 0 25px 25px 25px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.tooltip {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font: 12px sans-serif;
+  line-height: 6px;
+}
